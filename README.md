@@ -1,7 +1,7 @@
 parabox-primitives
 ==================
 
-[Parabox Primitives Webpage](http://parabox.co/primitives.html)
+[Youtube Demo](https://www.youtube.com/embed/EEpDARN5NXA)
 
 A Maya-like way to draw primitives in the Unity editor.
 
