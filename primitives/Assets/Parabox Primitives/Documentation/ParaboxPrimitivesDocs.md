@@ -1,6 +1,6 @@
 # Parabox Primitives
 
-![](Shapes.png)
+![](Shapes.PNG)
 
 ## Quick Start Steps
 
