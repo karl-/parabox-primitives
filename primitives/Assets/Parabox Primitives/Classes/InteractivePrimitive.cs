@@ -63,7 +63,7 @@ namespace Parabox.InteractivePrimitives
 		{
 			FreezeTransform();
 			#if UNITY_EDITOR
-			Unwrapping.GenerateSecondaryUVSet(GetComponent<MeshFilter>().sharedMesh);
+			// Unwrapping.GenerateSecondaryUVSet(GetComponent<MeshFilter>().sharedMesh);
 			#endif
 		}
 		
@@ -76,7 +76,7 @@ namespace Parabox.InteractivePrimitives
 			get
 			{
 				GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube);
-				Material mat = go.renderer.sharedMaterial;
+				Material mat = go.GetComponent<Renderer>().sharedMaterial;
 				DestroyImmediate(go);
 				return mat;
 			}

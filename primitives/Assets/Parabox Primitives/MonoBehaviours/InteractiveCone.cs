@@ -110,7 +110,7 @@ namespace Parabox.InteractivePrimitives
 			// base.OnFinishDragSizing();	// need to build UVs before assigning the UV2 channel
 			FreezeTransform();
 
-				// calc uvs
+			// calc uvs
 			Mesh m = GetComponent<MeshFilter>().sharedMesh;
 			
 			Vector2[] uvs = m.uv;
@@ -124,10 +124,6 @@ namespace Parabox.InteractivePrimitives
 				uvs[i] = new Vector2(v[i].x, v[i].z);
 
 			m.uv = uvs;
-
-			#if UNITY_EDITOR
-			Unwrapping.GenerateSecondaryUVSet(m);
-			#endif
 		}
 	}
 }

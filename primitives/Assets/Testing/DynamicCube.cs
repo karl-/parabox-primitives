@@ -9,7 +9,7 @@ public class DynamicCube : MonoBehaviour
 	void Start()
 	{
 		preview = GameObject.CreatePrimitive(PrimitiveType.Cube);
-		preview.renderer.enabled = false;
+		preview.GetComponent<Renderer>().enabled = false;
 	}
 
 	enum DragState
@@ -42,7 +42,7 @@ public class DynamicCube : MonoBehaviour
 				height = .1f;
 
 				dragState = DragState.Base;
-				preview.renderer.enabled = true;
+				preview.GetComponent<Renderer>().enabled = true;
 			}
 		}
 
@@ -56,7 +56,7 @@ public class DynamicCube : MonoBehaviour
 
 				case DragState.Height:
 					dragState = DragState.None;
-					preview.renderer.enabled = false;
+					preview.GetComponent<Renderer>().enabled = false;
 
 					CopyPreviewMesh();
 
@@ -67,7 +67,7 @@ public class DynamicCube : MonoBehaviour
 		switch(dragState)
 		{
 			case DragState.None:
-				preview.renderer.enabled = false;
+				preview.GetComponent<Renderer>().enabled = false;
 				return;
 
 			case DragState.Base:

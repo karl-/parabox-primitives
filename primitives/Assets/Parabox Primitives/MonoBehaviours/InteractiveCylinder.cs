@@ -163,10 +163,6 @@ namespace Parabox.InteractivePrimitives
 			
 			msh.normals = nrm;
 			msh.uv = uvs;
-
-			#if UNITY_EDITOR
-			Unwrapping.GenerateSecondaryUVSet(msh);
-			#endif
 		}
 	}
 }

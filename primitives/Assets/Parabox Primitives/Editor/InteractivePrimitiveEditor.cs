@@ -23,7 +23,7 @@ public class InteractivePrimitiveEditor : Editor
 	{
 		t = ((InteractivePrimitive)target);
 		if(!t.sizing) return;
-		t.renderer.enabled = false;
+		t.GetComponent<Renderer>().enabled = false;
 		dragState = DragState.None;
 
 		Tools.current = Tool.Move;
@@ -96,7 +96,7 @@ public class InteractivePrimitiveEditor : Editor
 					baseEnd = baseStart;
 					height = .01f;
 
-					((InteractivePrimitive)target).renderer.enabled = true;
+					((InteractivePrimitive)target).GetComponent<Renderer>().enabled = true;
 					dragState = DragState.Base;
 				}
 
@@ -169,7 +169,7 @@ public class InteractivePrimitiveEditor : Editor
 	public virtual void DrawBounds()
 	{
 		// Draw Wireframe
-		Bounds b = t.renderer.bounds;
+		Bounds b = t.GetComponent<Renderer>().bounds;
 
 		Vector3 cen = b.center;
 		Vector3 ext = b.extents;
